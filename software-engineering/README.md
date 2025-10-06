@@ -8,6 +8,6 @@ Highlights:
 - Modular MVC structure and unit tests
 
 Paths:
-- `pirate agent/train.py`
-- `pirate agent/maze.py`
-- `pirate agent/visualizer.py`
+- `algorithms/pirate-agent/train.py`
+- `algorithms/pirate-agent/maze.py`
+- `algorithms/pirate-agent/visualizer.py`

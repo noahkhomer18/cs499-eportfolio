@@ -8,6 +8,6 @@ Highlights:
 - Complexity analysis and efficiency checks
 
 Paths:
-- `pirate agent/train.py`
-- `pirate agent/models.py`
-- `pirate agent/visualizer.py`
+- `algorithms/pirate-agent/train.py`
+- `algorithms/pirate-agent/models.py`
+- `algorithms/pirate-agent/visualizer.py`

@@ -10,6 +10,6 @@ Highlights:
 - Backend structure updates for schema integrity
 
 Path:
-- `465/CS-465/`
+- `databases/travlr-getaways/`
 
 

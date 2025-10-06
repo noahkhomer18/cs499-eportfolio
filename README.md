@@ -12,6 +12,6 @@ This portfolio showcases three enhancements organized as top-level folders. Each
 See folder READMEs for details and file paths.
 
 Notes:
-- Pirate Agent files are under `pirate-agent/`
-- `465/CS-465` is included directly (no submodule), for easy browsing
+- Pirate Agent files are under `algorithms/pirate-agent/`
+- Travlr Getaways lives at `databases/travlr-getaways/`
 
