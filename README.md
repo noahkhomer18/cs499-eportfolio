@@ -1,30 +1,43 @@
-# CS 499 ePortfolio
+# CS 499 ePortfolio (Main)
 
-This repository hosts my CS 499 Capstone ePortfolio. It is organized around three enhancement categories required by the capstone:
+This portfolio presents one artifact per capstone category with concise narratives and links.
 
-- Software Design and Engineering
-- Algorithms and Data Structures
-- Databases
+## Software Design & Engineering
+- Artifact: Pirate Agent Reinforcement Learning (CS-370)
+- Highlights:
+  - Refactored training controller and configuration
+  - Dynamic learning rate, improved Q-learning policy
+  - Modular MVC structure and unit tests
+- Paths: `pirate agent/train.py`, `pirate agent/maze.py`, `pirate agent/visualizer.py`
 
-Use the branches to navigate each category’s work:
+## Algorithms & Data Structures
+- Artifact: Pirate Agent Reinforcement Learning (continued)
+- Highlights:
+  - Optimized Q-table ops and epsilon-greedy exploration
+  - A* path visualization (`visualizer.py`)
+  - Complexity analysis and efficiency checks
+- Paths: `pirate agent/train.py`, `pirate agent/models.py`, `pirate agent/visualizer.py`
 
-- `software-engineer`: Enhancements in software design and engineering
-- `algorithms`: Enhancements in algorithms and data structures
-- `database`: Enhancements in databases
+## Databases
+- Artifact: Travlr Getaways full-stack app (CS-465)
+- Highlights:
+  - User–trip–review relationships
+  - MongoDB aggregations for analytics
+  - Role-based access control (admin vs regular)
+  - Indexing and query optimization for scalability
+  - Backend structure updates for schema integrity
+- Path: `465/CS-465/`
 
-Main branch contains shared materials:
+## Navigation
+- Branches (detailed writeups): `software-engineer`, `algorithms`, `database`
+- Main contains shared materials:
+  - `self-assessment/ProfessionalSelfAssessment.md`
+  - `code-review/CodeReviewPlan.md`
 
-- `self-assessment/ProfessionalSelfAssessment.md`
-- `code-review/CodeReviewPlan.md`
-
-## How to View
-1. Switch branches on GitHub to view the category-specific content.
-2. Each branch includes artifacts (original and enhanced) and narratives.
-
-## Milestones Checklist
-- [ ] Code Review video added
-- [ ] Enhancement 1: Software Design and Engineering
-- [ ] Enhancement 2: Algorithms and Data Structures
-- [ ] Enhancement 3: Databases
-- [ ] Professional Self-Assessment finalized
+## Submission Checklist
+- [ ] Code Review video link
+- [ ] SE enhancement summary and files
+- [ ] ALG enhancement summary and files
+- [ ] DB enhancement summary and files
+- [ ] Professional Self-Assessment
 
