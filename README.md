@@ -9,5 +9,9 @@ This portfolio showcases three enhancements organized as top-level folders. Each
 - `self-assessment/` — Professional Self-Assessment
 - `code-review/` — Code review plan/notes
 
-See folder READMEs for details and file paths. Pirate Agent files now under `pirate-agent/`.
+See folder READMEs for details and file paths.
+
+Notes:
+- Pirate Agent files are under `pirate-agent/`
+- `465/CS-465` is included directly (no submodule), for easy browsing
 
