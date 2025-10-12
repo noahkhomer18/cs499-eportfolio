@@ -101,6 +101,6 @@ CS499-ePortfolio/
 
 ---
 
-### Hashtags (for public sharing)
+### Hashtags for SEO for Future SNHU students
 `#SNHU #ComputerScience #FullStackDevelopment #Angular #NodeJS #MongoDB #Portfolio #SoftwareEngineering`
 
