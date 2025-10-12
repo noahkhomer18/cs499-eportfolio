@@ -1,0 +1,88 @@
+<div class="container py-3">
+  <h1 class="mb-3">{{ isEditMode ? 'Edit Trip' : 'Add New Trip' }}</h1>
+
+  <form (ngSubmit)="onSubmit()">
+    <div class="mb-3">
+      <label for="code" class="form-label">Trip Code</label>
+      <input
+        type="text"
+        class="form-control"
+        id="code"
+        [(ngModel)]="trip.code"
+        name="code"
+        required
+        [readonly]="isEditMode" />
+    </div>
+    <div class="mb-3">
+      <label for="name" class="form-label">Trip Name</label>
+      <input
+        type="text"
+        class="form-control"
+        id="name"
+        [(ngModel)]="trip.name"
+        name="name"
+        required />
+    </div>
+    <div class="mb-3">
+      <label for="length" class="form-label">Length</label>
+      <input
+        type="text"
+        class="form-control"
+        id="length"
+        [(ngModel)]="trip.length"
+        name="length" />
+    </div>
+    <div class="mb-3">
+      <label for="start" class="form-label">Start Date</label>
+      <input
+        type="date"
+        class="form-control"
+        id="start"
+        [ngModel]="trip.start | date:'yyyy-MM-dd'"
+        (ngModelChange)="trip.start = $event"
+        name="start" />
+    </div>
+    <div class="mb-3">
+      <label for="resort" class="form-label">Resort</label>
+      <input
+        type="text"
+        class="form-control"
+        id="resort"
+        [(ngModel)]="trip.resort"
+        name="resort" />
+    </div>
+    <div class="mb-3">
+      <label for="perPerson" class="form-label">Price Per Person</label>
+      <input
+        type="text"
+        class="form-control"
+        id="perPerson"
+        [(ngModel)]="trip.perPerson"
+        name="perPerson" />
+    </div>
+    <div class="mb-3">
+      <label for="image" class="form-label">Image Filename</label>
+      <input
+        type="text"
+        class="form-control"
+        id="image"
+        [(ngModel)]="trip.image"
+        name="image" />
+    </div>
+    <div class="mb-3">
+      <label for="description" class="form-label">Description</label>
+      <textarea
+        class="form-control"
+        id="description"
+        [(ngModel)]="trip.description"
+        name="description"
+        rows="3"></textarea>
+    </div>
+    <button type="submit" class="btn btn-primary">
+      {{ isEditMode ? 'Update Trip' : 'Add Trip' }}
+    </button>
+    <button type="button" class="btn btn-secondary ms-2" (click)="onCancel()">
+      Cancel
+    </button>
+  </form>
+</div>

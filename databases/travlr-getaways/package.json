@@ -1,0 +1,33 @@
+{
+  "name": "cs465-project",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "start": "node app.js",
+    "dev": "nodemon app.js",
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "cd client/travlr-admin && ng build --prod",
+    "install:all": "npm install && cd client/travlr-admin && npm install",
+    "dev:full": "concurrently \"npm run dev\" \"cd client/travlr-admin && ng serve\"",
+    "setup": "npm run install:all && echo 'Setup complete! Run npm run dev:full to start both servers'"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "dependencies": {
+    "bcryptjs": "^2.4.3",
+    "cors": "^2.8.5",
+    "dotenv": "^16.6.1",
+    "express": "^5.1.0",
+    "express-validator": "^7.2.1",
+    "hbs": "^4.2.0",
+    "jsonwebtoken": "^9.0.2",
+    "mongoose": "^8.19.0"
+  },
+  "devDependencies": {
+    "nodemon": "^3.0.1",
+    "concurrently": "^8.2.2"
+  },
+  "description": ""
+}

@@ -1,0 +1,12 @@
+﻿<div class="container py-3">
+  <div class="d-flex justify-content-between align-items-center mb-3">
+    <h1 class="mb-0">Travlr Getaways</h1>
+  </div>
+
+  <div class="row g-3">
+    <div *ngFor="let trip of trips" class="col-12 col-sm-6 col-md-4 col-lg-3">
+      <app-trip-card [trip]="trip"></app-trip-card>
+    </div>
+  </div>
+  <div class="text-muted small mt-3">{{ message }}</div>
+</div>

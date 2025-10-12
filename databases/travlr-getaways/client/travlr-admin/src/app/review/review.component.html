@@ -1,0 +1,66 @@
+<div class="reviews-section mt-4">
+  <h3>Reviews</h3>
+  
+  <!-- Review Form (for logged in users) -->
+  <div *ngIf="isLoggedIn && showReviewForm" class="card mb-3">
+    <div class="card-body">
+      <h5>Write a Review</h5>
+      <form (ngSubmit)="submitReview()">
+        <div class="mb-3">
+          <label class="form-label">Rating</label>
+          <select class="form-select" [(ngModel)]="newReview.rating" name="rating" required>
+            <option value="5">5 Stars</option>
+            <option value="4">4 Stars</option>
+            <option value="3">3 Stars</option>
+            <option value="2">2 Stars</option>
+            <option value="1">1 Star</option>
+          </select>
+        </div>
+        <div class="mb-3">
+          <label class="form-label">Comment</label>
+          <textarea 
+            class="form-control" 
+            [(ngModel)]="newReview.comment" 
+            name="comment" 
+            rows="3" 
+            required
+            placeholder="Share your experience...">
+          </textarea>
+        </div>
+        <button type="submit" class="btn btn-primary">Submit Review</button>
+        <button type="button" class="btn btn-secondary ms-2" (click)="toggleReviewForm()">Cancel</button>
+      </form>
+    </div>
+  </div>
+
+  <!-- Add Review Button -->
+  <div *ngIf="isLoggedIn && !showReviewForm" class="mb-3">
+    <button class="btn btn-outline-primary" (click)="toggleReviewForm()">
+      Write a Review
+    </button>
+  </div>
+
+  <!-- Reviews List -->
+  <div *ngIf="reviews.length > 0; else noReviews">
+    <div *ngFor="let review of reviews" class="card mb-3">
+      <div class="card-body">
+        <div class="d-flex justify-content-between align-items-start">
+          <div>
+            <h6 class="card-title mb-1">{{ review.user?.name || 'Anonymous' }}</h6>
+            <div class="text-warning mb-2">
+              <span *ngFor="let star of getStars(review.rating)">{{ star }}</span>
+            </div>
+          </div>
+          <small class="text-muted">{{ review.dateCreated | date:'short' }}</small>
+        </div>
+        <p class="card-text">{{ review.comment }}</p>
+      </div>
+    </div>
+  </div>
+
+  <ng-template #noReviews>
+    <div class="alert alert-info">
+      No reviews yet. Be the first to review this trip!
+    </div>
+  </ng-template>
+</div>
